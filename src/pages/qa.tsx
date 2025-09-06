@@ -20,6 +20,37 @@ export default function QA() {
           relationships, and energy balance. Check in each morning for updates.
         </p>
       </section>
+
+      {/* FAQ Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does Ovomoon offer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "Ovomoon provides personalized astrology and moon insights designed to align with your energy and emotions each day."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I use daily moon guidance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "You can follow your daily guidance for clarity on decisions, relationships, and energy balance. Check in each morning for updates."
+                }
+              }
+            ]
+          }),
+        }}
+      />
     </main>
   );
 }
