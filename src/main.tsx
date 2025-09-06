@@ -12,16 +12,17 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        {/* Do NOT wrap home with Layout */}
-        <Route path="/" element={<App />} />
+  {/* homepage = your original App, NOT wrapped */}
+  <Route path="/" element={<App />} />
 
-        {/* Everything else uses Layout */}
-        <Route element={<Layout />}>
-          <Route path="qa" element={<QA />} />
-          <Route path="blog" element={<BlogIndex />} />
-          <Route path="blog/:slug" element={<PostPage />} />
-        </Route>
-      </Routes>
+  {/* other pages use Layout */}
+  <Route element={<Layout />}>
+    <Route path="qa" element={<QA />} />
+    <Route path="blog" element={<BlogIndex />} />
+    <Route path="blog/:slug" element={<PostPage />} />
+  </Route>
+</Routes>
+
     </BrowserRouter>
   </React.StrictMode>
 );
